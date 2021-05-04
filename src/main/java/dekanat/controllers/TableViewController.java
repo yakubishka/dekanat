@@ -2,11 +2,14 @@ package dekanat.controllers;
 
 import dekanat.app.MainApp;
 import dekanat.architecture.BaseViewController;
-import dekanat.resources.LayoutRes;
+import dekanat.model.BaseTabHolder;
+import dekanat.model.holder.GroupTabHolder;
+import dekanat.model.holder.PeopleTabHolder;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+
+import java.util.ArrayList;
 
 public class TableViewController extends BaseViewController {
 
@@ -20,18 +23,14 @@ public class TableViewController extends BaseViewController {
   public void setMainApp(MainApp app) {
     super.setMainApp(app);
 
-    FXMLLoader loader = app.createLoader(LayoutRes.PEOPLE_LAYOUT);
+    ArrayList<BaseTabHolder<?>> holders = new ArrayList<>();
 
-//    Tab groupsTab = new Tab("Groups", new Label("Groups"));
-    Tab peopleTab = new Tab("People", app.getPaneFromLoader(loader));
-//    Tab marksTab = new Tab("Marks", new Label("Marks"));
-//    Tab subjectsTab = new Tab("Subjects", new Label("Subjects"));
+    holders.add(new PeopleTabHolder(app));
+    holders.add(new GroupTabHolder(app));
 
-//    tabPane.getTabs().add(groupsTab);
-    tabPane.getTabs().add(peopleTab);
+    for (BaseTabHolder<?> holder : holders)
+      tabPane.getTabs().add(new Tab(holder.getType().getTitle(), holder.getLayout()));
 
-//    tabPane.getTabs().add(marksTab);
-//    tabPane.getTabs().add(subjectsTab);
   }
 
 }

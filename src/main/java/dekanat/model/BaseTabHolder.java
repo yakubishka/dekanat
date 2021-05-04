@@ -3,6 +3,8 @@ package dekanat.model;
 import dekanat.app.MainApp;
 import dekanat.architecture.BaseTabViewController;
 import dekanat.resources.StringRes;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.Pane;
 
 public abstract class BaseTabHolder<T> {
 
@@ -29,11 +31,25 @@ public abstract class BaseTabHolder<T> {
     }
   }
 
+  private Pane layout;
+  private BaseTabViewController<T> controller;
+
   public BaseTabHolder(MainApp app) {
     this.app = app;
+    FXMLLoader loader = app.createLoader(getLayoutRes());
+    layout = app.getPaneFromLoader(loader);
+    controller = loader.getController();
   }
 
-  public abstract BaseTabViewController<T> getController();
+  public Pane getLayout() {
+    return layout;
+  }
+
+  public BaseTabViewController<T> getController() {
+    return controller;
+  }
+
+  public abstract String getLayoutRes();
   public abstract TabType getType();
 
 }

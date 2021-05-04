@@ -2,42 +2,52 @@ dekanat/architecture/BaseTabViewController.java
  dekanat.architecture.BaseTabViewController
 dekanat/architecture/BaseViewController.java
  dekanat.architecture.BaseViewController
-dekanat/model/db/Groups.java
- dekanat.model.db.Groups
-dekanat/controllers/tab/SubjectsController.java
- dekanat.controllers.tab.SubjectsController
 dekanat/resources/StringRes.java
  dekanat.resources.StringRes
-dekanat/controllers/tab/MarksController.java
- dekanat.controllers.tab.MarksController
-dekanat/model/requests/select/Selectable.java
- dekanat.model.requests.select.Selectable
 dekanat/model/db/Marks.java
  dekanat.model.db.Marks
 dekanat/model/db/Subjects.java
  dekanat.model.db.Subjects
 dekanat/utils/DBHelper.java
  dekanat.utils.DBHelper
-dekanat/controllers/tab/GroupsController.java
- dekanat.controllers.tab.GroupsController
-dekanat/model/requests/select/PeopleSelect.java
- dekanat.model.requests.select.PeopleSelect
-dekanat/controllers/TableViewController.java
- dekanat.controllers.TableViewController
-dekanat/controllers/tab/people/PeoplePresenter.java
- dekanat.controllers.tab.people.PeoplePresenter
+dekanat/controllers/tab/marks/MarksController.java
+ dekanat.controllers.tab.marks.MarksController
+dekanat/controllers/tab/people/PeopleController.java
+ dekanat.controllers.tab.people.PeopleController
 dekanat/resources/LayoutRes.java
  dekanat.resources.LayoutRes
 dekanat/model/db/People.java
  dekanat.model.db.People
-dekanat/resources/WindowConstants.java
- dekanat.resources.WindowConstants
+dekanat/model/requests/select/PeopleSelect.java
+ dekanat.model.requests.select.PeopleSelect
 dekanat/app/MainApp.java
  dekanat.app.MainApp
-dekanat/controllers/tab/people/PeopleController.java
- dekanat.controllers.tab.people.PeopleController
-dekanat/model/holder/PeopleTabHolder.java
- dekanat.model.holder.PeopleTabHolder
+dekanat/controllers/tab/groups/GroupsPresenter.java
+ dekanat.controllers.tab.groups.GroupsPresenter
+dekanat/controllers/tab/people/PeoplePresenter.java
+ dekanat.controllers.tab.people.PeoplePresenter
+dekanat/model/db/Groups.java
+ dekanat.model.db.Groups
+dekanat/model/requests/select/Selectable.java
+ dekanat.model.requests.select.Selectable
+dekanat/controllers/tab/subjects/SubjectsController.java
+ dekanat.controllers.tab.subjects.SubjectsController
+dekanat/resources/WindowConstants.java
+ dekanat.resources.WindowConstants
+dekanat/controllers/tab/marks/MarksPresenter.java
+ dekanat.controllers.tab.marks.MarksPresenter
 dekanat/model/BaseTabHolder.java
  dekanat.model.BaseTabHolder
  dekanat.model.BaseTabHolder$TabType
+dekanat/model/requests/select/GroupsSelect.java
+ dekanat.model.requests.select.GroupsSelect
+dekanat/model/holder/GroupTabHolder.java
+ dekanat.model.holder.GroupTabHolder
+dekanat/controllers/TableViewController.java
+ dekanat.controllers.TableViewController
+dekanat/model/holder/PeopleTabHolder.java
+ dekanat.model.holder.PeopleTabHolder
+dekanat/controllers/tab/groups/GroupsController.java
+ dekanat.controllers.tab.groups.GroupsController
+dekanat/controllers/tab/subjects/SubjectsPresenter.java
+ dekanat.controllers.tab.subjects.SubjectsPresenter

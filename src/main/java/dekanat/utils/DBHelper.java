@@ -1,6 +1,5 @@
 package dekanat.utils;
 
-import dekanat.model.db.People;
 import dekanat.model.requests.select.Selectable;
 
 import java.sql.*;

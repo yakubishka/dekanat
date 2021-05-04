@@ -2,24 +2,23 @@ package dekanat.model.holder;
 
 import dekanat.app.MainApp;
 import dekanat.model.BaseTabHolder;
-import dekanat.model.db.People;
+import dekanat.model.db.Groups;
 import dekanat.resources.LayoutRes;
 
-public class PeopleTabHolder extends BaseTabHolder<People> {
+public class GroupTabHolder extends BaseTabHolder<Groups> {
 
-  public PeopleTabHolder(MainApp app) {
+
+  public GroupTabHolder(MainApp app) {
     super(app);
   }
 
   @Override
   public String getLayoutRes() {
-    return LayoutRes.PEOPLE_LAYOUT;
+    return LayoutRes.GROUPS_LAYOUT;
   }
 
   @Override
   public TabType getType() {
-    return TabType.PEOPLE;
+    return TabType.GROUPS;
   }
-
-
 }

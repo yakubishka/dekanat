@@ -5,10 +5,6 @@ import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
 public class People {
 
   private LongProperty id;
