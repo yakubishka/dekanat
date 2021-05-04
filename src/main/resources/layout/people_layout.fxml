@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dekanat.controllers.tab.people.PeopleController">
    <children>
-      <TableView fx:id="peopleTableView" layoutX="-1.0" layoutY="33.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="tableView" layoutX="-1.0" layoutY="33.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
             <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
           <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First name" />

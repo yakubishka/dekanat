@@ -5,6 +5,7 @@ import dekanat.architecture.BaseViewController;
 import dekanat.model.BaseTabHolder;
 import dekanat.model.holder.GroupTabHolder;
 import dekanat.model.holder.PeopleTabHolder;
+import dekanat.model.holder.SubjectsTabHolder;
 import javafx.fxml.FXML;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -27,6 +28,7 @@ public class TableViewController extends BaseViewController {
 
     holders.add(new PeopleTabHolder(app));
     holders.add(new GroupTabHolder(app));
+    holders.add(new SubjectsTabHolder(app));
 
     for (BaseTabHolder<?> holder : holders)
       tabPane.getTabs().add(new Tab(holder.getType().getTitle(), holder.getLayout()));

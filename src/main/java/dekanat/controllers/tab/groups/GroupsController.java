@@ -1,17 +1,12 @@
 package dekanat.controllers.tab.groups;
 
 import dekanat.architecture.BaseTabViewController;
+import dekanat.architecture.BaseTabViewPresenter;
 import dekanat.model.db.Groups;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 
-public class GroupsController implements BaseTabViewController<Groups> {
-
-  private final GroupsPresenter presenter = new GroupsPresenter();
-
-  @FXML
-  private TableView<Groups> groupTableView;
+public class GroupsController extends BaseTabViewController<Groups> {
 
   @FXML
   private TableColumn<Groups, Long> idColumn;
@@ -20,11 +15,11 @@ public class GroupsController implements BaseTabViewController<Groups> {
   private TableColumn<Groups, String> nameColumn;
 
 
-  @FXML
-  private void initialize() {
+  @Override
+  protected void initialize() {
+    super.initialize();
     idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
     nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
-    groupTableView.setItems(presenter.getGroups());
   }
 
   @Override
@@ -40,6 +35,11 @@ public class GroupsController implements BaseTabViewController<Groups> {
   @Override
   public void inEditClick() {
 
+  }
+
+  @Override
+  public BaseTabViewPresenter<Groups> createPresenter() {
+    return new GroupsPresenter();
   }
 
 }

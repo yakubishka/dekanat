@@ -1,17 +1,12 @@
 package dekanat.controllers.tab.people;
 
 import dekanat.architecture.BaseTabViewController;
+import dekanat.architecture.BaseTabViewPresenter;
 import dekanat.model.db.People;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 
-public class PeopleController implements BaseTabViewController<People> {
-
-  private PeoplePresenter presenter = new PeoplePresenter();
-
-  @FXML
-  private TableView<People> peopleTableView;
+public class PeopleController extends BaseTabViewController<People> {
 
   @FXML
   private TableColumn<People, Long> idColumn;
@@ -32,14 +27,14 @@ public class PeopleController implements BaseTabViewController<People> {
   private TableColumn<People, String> typeColumn;
 
   @FXML
-  private void initialize() {
+  protected void initialize() {
+    super.initialize();
     idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
     firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
     lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
     fatherNameColumn.setCellValueFactory(cellData -> cellData.getValue().fatherNameProperty());
     groupColumn.setCellValueFactory(cellData -> cellData.getValue().groupIdProperty().asObject());
     typeColumn.setCellValueFactory(cellData -> cellData.getValue().typeProperty());
-    peopleTableView.setItems(presenter.getPeople());
   }
 
   @Override
@@ -55,6 +50,11 @@ public class PeopleController implements BaseTabViewController<People> {
   @Override
   public void inEditClick() {
 
+  }
+
+  @Override
+  public BaseTabViewPresenter<People> createPresenter() {
+    return new PeoplePresenter();
   }
 
 }

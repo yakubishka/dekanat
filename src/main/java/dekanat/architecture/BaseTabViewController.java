@@ -1,11 +1,28 @@
 package dekanat.architecture;
 
-public interface BaseTabViewController<T> {
+import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
 
-  void onInsertClick();
+public abstract class BaseTabViewController<T> {
 
-  void onDeleteClick();
+  @FXML
+  protected TableView<T> tableView;
 
-  void inEditClick();
+  protected BaseTabViewPresenter<T> presenter;
+
+  @FXML
+  protected void initialize() {
+    presenter = createPresenter();
+    presenter.loadData();
+    tableView.setItems(presenter.getList());
+  }
+
+  public abstract void onInsertClick();
+
+  public abstract void onDeleteClick();
+
+  public abstract void inEditClick();
+
+  public abstract BaseTabViewPresenter<T> createPresenter();
 
 }

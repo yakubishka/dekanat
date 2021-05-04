@@ -1,21 +1,13 @@
 package dekanat.controllers.tab.groups;
 
+import dekanat.architecture.BaseTabViewPresenter;
 import dekanat.model.db.Groups;
 import dekanat.model.requests.select.GroupsSelect;
-import dekanat.utils.DBHelper;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import dekanat.model.requests.select.Selectable;
 
-public class GroupsPresenter {
-
-  private final ObservableList<Groups> groups = FXCollections.observableArrayList();
-
-  public GroupsPresenter() {
-    groups.addAll(DBHelper.getAllByRequest(new GroupsSelect()));
+public class GroupsPresenter extends BaseTabViewPresenter<Groups> {
+  @Override
+  public Selectable<Groups> getSelectable() {
+    return new GroupsSelect();
   }
-
-  public ObservableList<Groups> getGroups() {
-    return groups;
-  }
-
 }
