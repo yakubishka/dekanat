@@ -19,10 +19,16 @@ public abstract class BaseTabViewController<T> {
 
   public abstract void onInsertClick();
 
-  public abstract void onDeleteClick();
+  public void onDeleteClick() {
+    presenter.onDelete(tableView.getSelectionModel().getSelectedIndex());
+  }
 
   public abstract void inEditClick();
 
   public abstract BaseTabViewPresenter<T> createPresenter();
+
+  public void reloadList() {
+    presenter.reloadList();
+  }
 
 }

@@ -19,4 +19,11 @@ public abstract class BaseTabViewPresenter<T> {
 
   public abstract Selectable<T> getSelectable();
 
+  public abstract void onDelete(int index);
+
+  public void reloadList() {
+    list.clear();
+    loadData();
+  }
+
 }

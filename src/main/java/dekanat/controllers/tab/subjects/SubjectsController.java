@@ -29,11 +29,6 @@ public class SubjectsController extends BaseTabViewController<Subjects> {
   }
 
   @Override
-  public void onDeleteClick() {
-
-  }
-
-  @Override
   public void inEditClick() {
 
   }

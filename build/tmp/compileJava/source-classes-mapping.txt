@@ -1,17 +1,25 @@
-dekanat/architecture/BaseTabViewController.java
- dekanat.architecture.BaseTabViewController
+dekanat/model/requests/select/GroupsSelect.java
+ dekanat.model.requests.select.GroupsSelect
 dekanat/architecture/BaseViewController.java
  dekanat.architecture.BaseViewController
 dekanat/resources/StringRes.java
  dekanat.resources.StringRes
+dekanat/model/requests/delete/GroupsDelete.java
+ dekanat.model.requests.delete.GroupsDelete
 dekanat/model/db/Marks.java
  dekanat.model.db.Marks
-dekanat/controllers/tab/people/PeopleController.java
- dekanat.controllers.tab.people.PeopleController
+dekanat/model/db/Subjects.java
+ dekanat.model.db.Subjects
 dekanat/utils/DBHelper.java
  dekanat.utils.DBHelper
-dekanat/controllers/tab/marks/MarksController.java
- dekanat.controllers.tab.marks.MarksController
+dekanat/model/requests/delete/PeopleDelete.java
+ dekanat.model.requests.delete.PeopleDelete
+dekanat/model/requests/select/MarksSelect.java
+ dekanat.model.requests.select.MarksSelect
+dekanat/resources/WindowConstants.java
+ dekanat.resources.WindowConstants
+dekanat/model/requests/delete/Deletable.java
+ dekanat.model.requests.delete.Deletable
 dekanat/resources/LayoutRes.java
  dekanat.resources.LayoutRes
 dekanat/model/db/People.java
@@ -20,40 +28,46 @@ dekanat/model/requests/select/PeopleSelect.java
  dekanat.model.requests.select.PeopleSelect
 dekanat/app/MainApp.java
  dekanat.app.MainApp
-dekanat/controllers/tab/groups/GroupsPresenter.java
- dekanat.controllers.tab.groups.GroupsPresenter
-dekanat/architecture/BaseTabViewPresenter.java
- dekanat.architecture.BaseTabViewPresenter
-dekanat/model/db/Groups.java
- dekanat.model.db.Groups
+dekanat/model/requests/delete/MarksDelete.java
+ dekanat.model.requests.delete.MarksDelete
+dekanat/model/requests/select/SubjectSelect.java
+ dekanat.model.requests.select.SubjectSelect
 dekanat/model/requests/select/Selectable.java
  dekanat.model.requests.select.Selectable
-dekanat/model/holder/PeopleTabHolder.java
- dekanat.model.holder.PeopleTabHolder
+dekanat/model/db/Groups.java
+ dekanat.model.db.Groups
+dekanat/model/requests/delete/SubjectsDelete.java
+ dekanat.model.requests.delete.SubjectsDelete
 dekanat/controllers/tab/people/PeoplePresenter.java
  dekanat.controllers.tab.people.PeoplePresenter
+dekanat/controllers/tab/groups/GroupsPresenter.java
+ dekanat.controllers.tab.groups.GroupsPresenter
+dekanat/controllers/tab/subjects/SubjectsPresenter.java
+ dekanat.controllers.tab.subjects.SubjectsPresenter
+dekanat/architecture/BaseTabViewPresenter.java
+ dekanat.architecture.BaseTabViewPresenter
 dekanat/controllers/tab/marks/MarksPresenter.java
  dekanat.controllers.tab.marks.MarksPresenter
+dekanat/architecture/BaseTabViewController.java
+ dekanat.architecture.BaseTabViewController
+dekanat/controllers/TableViewController.java
+ dekanat.controllers.TableViewController
+dekanat/model/holder/GroupTabHolder.java
+ dekanat.model.holder.GroupTabHolder
+dekanat/controllers/tab/marks/MarksController.java
+ dekanat.controllers.tab.marks.MarksController
+dekanat/controllers/tab/people/PeopleController.java
+ dekanat.controllers.tab.people.PeopleController
+dekanat/model/holder/PeopleTabHolder.java
+ dekanat.model.holder.PeopleTabHolder
+dekanat/model/holder/SubjectsTabHolder.java
+ dekanat.model.holder.SubjectsTabHolder
+dekanat/controllers/tab/groups/GroupsController.java
+ dekanat.controllers.tab.groups.GroupsController
+dekanat/model/holder/MarksTabHolder.java
+ dekanat.model.holder.MarksTabHolder
+dekanat/controllers/tab/subjects/SubjectsController.java
+ dekanat.controllers.tab.subjects.SubjectsController
 dekanat/model/BaseTabHolder.java
  dekanat.model.BaseTabHolder
  dekanat.model.BaseTabHolder$TabType
-dekanat/model/requests/select/GroupsSelect.java
- dekanat.model.requests.select.GroupsSelect
-dekanat/model/holder/GroupTabHolder.java
- dekanat.model.holder.GroupTabHolder
-dekanat/controllers/tab/subjects/SubjectsController.java
- dekanat.controllers.tab.subjects.SubjectsController
-dekanat/resources/WindowConstants.java
- dekanat.resources.WindowConstants
-dekanat/model/db/Subjects.java
- dekanat.model.db.Subjects
-dekanat/controllers/tab/groups/GroupsController.java
- dekanat.controllers.tab.groups.GroupsController
-dekanat/model/requests/select/SubjectSelect.java
- dekanat.model.requests.select.SubjectSelect
-dekanat/controllers/tab/subjects/SubjectsPresenter.java
- dekanat.controllers.tab.subjects.SubjectsPresenter
-dekanat/controllers/TableViewController.java
- dekanat.controllers.TableViewController
-dekanat/model/holder/SubjectsTabHolder.java
- dekanat.model.holder.SubjectsTabHolder

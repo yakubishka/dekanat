@@ -12,7 +12,7 @@
         <buttons>
           <Button mnemonicParsing="false" text="Insert" />
             <Button mnemonicParsing="false" text="Edit" />
-            <Button mnemonicParsing="false" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
         </buttons>
       </ButtonBar>
    </children>

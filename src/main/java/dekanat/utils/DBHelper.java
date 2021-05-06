@@ -1,5 +1,6 @@
 package dekanat.utils;
 
+import dekanat.model.requests.delete.Deletable;
 import dekanat.model.requests.select.Selectable;
 
 import java.sql.*;
@@ -26,6 +27,18 @@ public class DBHelper {
       e.printStackTrace();
     }
     return selectList;
+  }
+
+  public static int deleteByRequest(long id, Deletable deletable) {
+    int rowAffected = 0;
+    try (Connection connection = DriverManager.getConnection(url, user, password)) {
+      try (Statement statement = connection.createStatement()) {
+        rowAffected = statement.executeUpdate(deletable.getDeleteByIdRequest(id));
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return rowAffected;
   }
 
 }

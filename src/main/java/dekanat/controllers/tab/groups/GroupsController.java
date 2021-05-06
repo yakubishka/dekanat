@@ -28,11 +28,6 @@ public class GroupsController extends BaseTabViewController<Groups> {
   }
 
   @Override
-  public void onDeleteClick() {
-
-  }
-
-  @Override
   public void inEditClick() {
 
   }

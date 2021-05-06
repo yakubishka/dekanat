@@ -9,7 +9,7 @@ public class PeopleSelect implements Selectable<People> {
 
   @Override
   public String getSelectRequest() {
-    return "select * from people";
+    return "select people.*, groups.name as group_name from people left join groups on people.group_id = groups.id";
   }
 
   @Override
@@ -20,6 +20,7 @@ public class PeopleSelect implements Selectable<People> {
     String fatherName = resultSet.getString("father_name");
     long groupId = resultSet.getLong("group_id");
     String type = resultSet.getString("type");
-    return new People(id, firstName, lastName, fatherName, groupId, type);
+    String groupName= resultSet.getString("group_name");
+    return new People(id, firstName, lastName, fatherName, groupId, type, groupName);
   }
 }

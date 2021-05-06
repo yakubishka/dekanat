@@ -21,29 +21,24 @@ public class PeopleController extends BaseTabViewController<People> {
   private TableColumn<People, String> fatherNameColumn;
 
   @FXML
-  private TableColumn<People, Long> groupColumn;
+  private TableColumn<People, String> groupColumn;
 
   @FXML
   private TableColumn<People, String> typeColumn;
 
-  @FXML
+  @Override
   protected void initialize() {
     super.initialize();
     idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
     firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
     lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
     fatherNameColumn.setCellValueFactory(cellData -> cellData.getValue().fatherNameProperty());
-    groupColumn.setCellValueFactory(cellData -> cellData.getValue().groupIdProperty().asObject());
+    groupColumn.setCellValueFactory(cellData -> cellData.getValue().groupNameProperty());
     typeColumn.setCellValueFactory(cellData -> cellData.getValue().typeProperty());
   }
 
   @Override
   public void onInsertClick() {
-
-  }
-
-  @Override
-  public void onDeleteClick() {
 
   }
 

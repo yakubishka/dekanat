@@ -13,14 +13,16 @@ public class People {
   private StringProperty fatherName;
   private LongProperty groupId;
   private StringProperty type;
+  private StringProperty groupName;
 
-  public People(long id, String firstName, String lastName, String fatherName, long groupId, String type) {
+  public People(long id, String firstName, String lastName, String fatherName, long groupId, String type, String groupName) {
     this.id = new SimpleLongProperty(id);
     this.firstName = new SimpleStringProperty(firstName);
     this.lastName = new SimpleStringProperty(lastName);
     this.fatherName = new SimpleStringProperty(fatherName);
     this.groupId = new SimpleLongProperty(groupId);
     this.type = new SimpleStringProperty(type);
+    this.groupName = new SimpleStringProperty(groupName);
   }
 
   public long getId() {
@@ -93,5 +95,17 @@ public class People {
 
   public void setType(String type) {
     this.type.set(type);
+  }
+
+  public String getGroupName() {
+    return groupName.get();
+  }
+
+  public StringProperty groupNameProperty() {
+    return groupName;
+  }
+
+  public void setGroupName(String groupName) {
+    this.groupName.set(groupName);
   }
 }
