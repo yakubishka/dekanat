@@ -13,7 +13,7 @@ public class LayoutRes {
   public static final String ADD_EDIT_GROUPS = "add_edit_groups_layout.fxml";
   public static final String ADD_EDIT_MARKS = "add_edit_marks_layout.fxml";
   public static final String ADD_EDIT_PEOPLE = "add_edit_people_layout.fxml";
-  public static final String ADD_EDIT_SUBJECTS = "add_edit_subjects_layout.fxml";
+  public static final String ADD_EDIT_SUBJECTS = "add_edit_subject_layout.fxml";
 
 
 }

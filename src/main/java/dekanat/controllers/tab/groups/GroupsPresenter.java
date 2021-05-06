@@ -30,7 +30,6 @@ public class GroupsPresenter extends BaseTabViewPresenter<Groups> {
     if (app != null) {
       Groups groupToChange = list.get(index);
       AddEditGroupDialogController.showAsDialog(app, groupToChange);
-      System.out.println(new GroupUpdate().getDeleteByIdRequest(groupToChange));
       DBHelper.deleteOrUpdateByRequest(groupToChange, new GroupUpdate());
     }
   }
