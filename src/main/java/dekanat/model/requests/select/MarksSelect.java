@@ -1,11 +1,12 @@
 package dekanat.model.requests.select;
 
 import dekanat.model.db.Marks;
+import dekanat.model.requests.SelectInsertable;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class MarksSelect implements Selectable<Marks> {
+public class MarksSelect implements SelectInsertable<Marks> {
   @Override
   public String getSelectRequest() {
     return "with students_marks as "

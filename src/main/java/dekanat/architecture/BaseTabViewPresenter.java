@@ -1,6 +1,7 @@
 package dekanat.architecture;
 
-import dekanat.model.requests.select.Selectable;
+import dekanat.app.MainApp;
+import dekanat.model.requests.SelectInsertable;
 import dekanat.utils.DBHelper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,6 +9,12 @@ import javafx.collections.ObservableList;
 public abstract class BaseTabViewPresenter<T> {
 
   protected ObservableList<T> list = FXCollections.observableArrayList();
+
+  protected MainApp app;
+
+  public void setMainApp(MainApp app) {
+    this.app = app;
+  }
 
   public void loadData() {
     list.addAll(DBHelper.getAllByRequest(getSelectable()));
@@ -17,9 +24,11 @@ public abstract class BaseTabViewPresenter<T> {
     return list;
   }
 
-  public abstract Selectable<T> getSelectable();
+  public abstract SelectInsertable<T> getSelectable();
 
   public abstract void onDelete(int index);
+  public abstract void onEdit(int index);
+  public abstract void onInsert();
 
   public void reloadList() {
     list.clear();

@@ -1,5 +1,6 @@
 package dekanat.architecture;
 
+import dekanat.app.MainApp;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
@@ -10,6 +11,13 @@ public abstract class BaseTabViewController<T> {
 
   protected BaseTabViewPresenter<T> presenter;
 
+  protected MainApp app;
+
+  public void setMainApp(MainApp app) {
+    this.app = app;
+    presenter.setMainApp(app);
+  }
+
   @FXML
   protected void initialize() {
     presenter = createPresenter();
@@ -17,13 +25,17 @@ public abstract class BaseTabViewController<T> {
     tableView.setItems(presenter.getList());
   }
 
-  public abstract void onInsertClick();
+  public void onInsertClick() {
+    presenter.onInsert();
+  }
 
   public void onDeleteClick() {
     presenter.onDelete(tableView.getSelectionModel().getSelectedIndex());
   }
 
-  public abstract void inEditClick();
+  public void onEditClick() {
+    presenter.onEdit(tableView.getSelectionModel().getSelectedIndex());
+  }
 
   public abstract BaseTabViewPresenter<T> createPresenter();
 

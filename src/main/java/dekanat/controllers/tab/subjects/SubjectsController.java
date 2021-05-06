@@ -29,7 +29,7 @@ public class SubjectsController extends BaseTabViewController<Subjects> {
   }
 
   @Override
-  public void inEditClick() {
+  public void onEditClick() {
 
   }
 

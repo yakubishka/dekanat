@@ -38,4 +38,9 @@ public class Groups {
   public void setName(String name) {
     this.name.set(name);
   }
+
+  public boolean isEmpty() {
+    return id.getValue() == -1 && name.getValue().isEmpty();
+  }
+
 }

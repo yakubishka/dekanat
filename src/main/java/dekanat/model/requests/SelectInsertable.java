@@ -1,9 +1,9 @@
-package dekanat.model.requests.select;
+package dekanat.model.requests;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public interface Selectable<T> {
+public interface SelectInsertable<T> {
 
   String getSelectRequest();
 

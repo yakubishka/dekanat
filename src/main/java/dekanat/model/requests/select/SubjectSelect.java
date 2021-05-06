@@ -1,11 +1,12 @@
 package dekanat.model.requests.select;
 
 import dekanat.model.db.Subjects;
+import dekanat.model.requests.SelectInsertable;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SubjectSelect implements Selectable<Subjects> {
+public class SubjectSelect implements SelectInsertable<Subjects> {
   @Override
   public String getSelectRequest() {
     return "select * from subjects";

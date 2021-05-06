@@ -1,7 +1,7 @@
 package dekanat.utils;
 
-import dekanat.model.requests.delete.Deletable;
-import dekanat.model.requests.select.Selectable;
+import dekanat.model.requests.DeletUpdatable;
+import dekanat.model.requests.SelectInsertable;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class DBHelper {
   private static final String user = "user";
   private static final String password = "12341234";
 
-  public static <T> List<T> getAllByRequest(Selectable<T> selectable) {
+  public static <T> List<T> getAllByRequest(SelectInsertable<T> selectable) {
     ArrayList<T> selectList = new ArrayList<>();
 
     try (Connection connection = DriverManager.getConnection(url, user, password)) {
@@ -29,11 +29,11 @@ public class DBHelper {
     return selectList;
   }
 
-  public static int deleteByRequest(long id, Deletable deletable) {
+  public static int deleteByRequest(long id, DeletUpdatable deletUpdatable) {
     int rowAffected = 0;
     try (Connection connection = DriverManager.getConnection(url, user, password)) {
       try (Statement statement = connection.createStatement()) {
-        rowAffected = statement.executeUpdate(deletable.getDeleteByIdRequest(id));
+        rowAffected = statement.executeUpdate(deletUpdatable.getDeleteByIdRequest(id));
       }
     } catch (SQLException e) {
       e.printStackTrace();

@@ -43,7 +43,7 @@ public class PeopleController extends BaseTabViewController<People> {
   }
 
   @Override
-  public void inEditClick() {
+  public void onEditClick() {
 
   }
 

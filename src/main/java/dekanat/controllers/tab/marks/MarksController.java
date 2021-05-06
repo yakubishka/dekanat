@@ -38,7 +38,7 @@ public class MarksController extends BaseTabViewController<Marks> {
   }
 
   @Override
-  public void inEditClick() {
+  public void onEditClick() {
 
   }
 

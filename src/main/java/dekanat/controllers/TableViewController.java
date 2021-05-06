@@ -7,8 +7,6 @@ import dekanat.model.holder.GroupTabHolder;
 import dekanat.model.holder.MarksTabHolder;
 import dekanat.model.holder.PeopleTabHolder;
 import dekanat.model.holder.SubjectsTabHolder;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -21,9 +19,7 @@ public class TableViewController extends BaseViewController {
   private TabPane tabPane;
 
   @FXML
-  private void initialize() {
-    System.out.println("init");
-  }
+  private void initialize() { }
 
   ArrayList<BaseTabHolder<?>> holders = new ArrayList<>();
 
@@ -45,9 +41,22 @@ public class TableViewController extends BaseViewController {
   }
 
   @FXML
-  void onDeleteClick() {
-    int tabIndex = tabPane.getSelectionModel().getSelectedIndex();
-    holders.get(tabIndex).getController().onDeleteClick();
+  private void onDeleteClick() {
+    holders.get(getCurrentTabIndex()).getController().onDeleteClick();
+  }
+
+  @FXML
+  private void onInsertClick() {
+    holders.get(getCurrentTabIndex()).getController().onInsertClick();
+  }
+
+  @FXML
+  private void onEditClick() {
+    holders.get(getCurrentTabIndex()).getController().onEditClick();
+  }
+
+  private int getCurrentTabIndex() {
+    return tabPane.getSelectionModel().getSelectedIndex();
   }
 
 }

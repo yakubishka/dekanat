@@ -1,11 +1,12 @@
 package dekanat.model.requests.select;
 
 import dekanat.model.db.People;
+import dekanat.model.requests.SelectInsertable;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PeopleSelect implements Selectable<People> {
+public class PeopleSelect implements SelectInsertable<People> {
 
   @Override
   public String getSelectRequest() {

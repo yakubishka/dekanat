@@ -39,6 +39,7 @@ public abstract class BaseTabHolder<T> {
     FXMLLoader loader = app.createLoader(getLayoutRes());
     layout = app.getPaneFromLoader(loader);
     controller = loader.getController();
+    controller.setMainApp(app);
   }
 
   public Pane getLayout() {

@@ -23,16 +23,6 @@ public class GroupsController extends BaseTabViewController<Groups> {
   }
 
   @Override
-  public void onInsertClick() {
-
-  }
-
-  @Override
-  public void inEditClick() {
-
-  }
-
-  @Override
   public BaseTabViewPresenter<Groups> createPresenter() {
     return new GroupsPresenter();
   }
