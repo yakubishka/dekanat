@@ -17,7 +17,7 @@ public class MarksPresenter extends BaseTabViewPresenter<Marks> {
   @Override
   public void onDelete(int index) {
     Marks markToDelete = list.get(index);
-    if (DBHelper.deleteByRequest(markToDelete.getId(), new MarksDelete()) > 0) {
+    if (DBHelper.deleteOrUpdateByRequest(markToDelete, new MarksDelete()) > 0) {
       list.remove(index);
     }
   }

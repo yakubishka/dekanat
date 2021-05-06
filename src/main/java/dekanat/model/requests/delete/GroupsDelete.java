@@ -1,10 +1,11 @@
 package dekanat.model.requests.delete;
 
+import dekanat.model.db.Groups;
 import dekanat.model.requests.DeletUpdatable;
 
-public class GroupsDelete implements DeletUpdatable {
+public class GroupsDelete implements DeletUpdatable<Groups> {
   @Override
-  public String getDeleteByIdRequest(long id) {
-    return "delete from groups where id = " + id;
+  public String getDeleteByIdRequest(Groups item) {
+    return "delete from groups where id = " + item.getId();
   }
 }

@@ -1,10 +1,11 @@
 package dekanat.model.requests.delete;
 
+import dekanat.model.db.Subjects;
 import dekanat.model.requests.DeletUpdatable;
 
-public class SubjectsDelete implements DeletUpdatable {
+public class SubjectsDelete implements DeletUpdatable<Subjects> {
   @Override
-  public String getDeleteByIdRequest(long id) {
-    return "delete from subjects where id = " + id;
+  public String getDeleteByIdRequest(Subjects item) {
+    return "delete from subjects where id = " + item.getId();
   }
 }

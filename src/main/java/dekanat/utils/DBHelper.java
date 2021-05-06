@@ -29,11 +29,11 @@ public class DBHelper {
     return selectList;
   }
 
-  public static int deleteByRequest(long id, DeletUpdatable deletUpdatable) {
+  public static <T> int deleteOrUpdateByRequest(T item, DeletUpdatable<T> deletUpdatable) {
     int rowAffected = 0;
     try (Connection connection = DriverManager.getConnection(url, user, password)) {
       try (Statement statement = connection.createStatement()) {
-        rowAffected = statement.executeUpdate(deletUpdatable.getDeleteByIdRequest(id));
+        rowAffected = statement.executeUpdate(deletUpdatable.getDeleteByIdRequest(item));
       }
     } catch (SQLException e) {
       e.printStackTrace();

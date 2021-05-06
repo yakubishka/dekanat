@@ -16,7 +16,7 @@ public class SubjectsPresenter extends BaseTabViewPresenter<Subjects> {
   @Override
   public void onDelete(int index) {
     Subjects subjectToDelete = list.get(index);
-    if (DBHelper.deleteByRequest(subjectToDelete.getId(), new SubjectsDelete()) > 0) {
+    if (DBHelper.deleteOrUpdateByRequest(subjectToDelete, new SubjectsDelete()) > 0) {
       list.remove(index);
     }
   }

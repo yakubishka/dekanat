@@ -7,6 +7,7 @@ import dekanat.model.requests.delete.GroupsDelete;
 import dekanat.model.requests.insert.GroupInsert;
 import dekanat.model.requests.select.GroupsSelect;
 import dekanat.model.requests.SelectInsertable;
+import dekanat.model.requests.update.GroupUpdate;
 import dekanat.utils.DBHelper;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class GroupsPresenter extends BaseTabViewPresenter<Groups> {
   @Override
   public void onDelete(int index) {
     Groups groupToDelete = list.get(index);
-    if (DBHelper.deleteByRequest(groupToDelete.getId(), new GroupsDelete()) > 0) {
+    if (DBHelper.deleteOrUpdateByRequest(groupToDelete, new GroupsDelete()) > 0) {
       list.remove(index);
     }
   }
@@ -29,6 +30,8 @@ public class GroupsPresenter extends BaseTabViewPresenter<Groups> {
     if (app != null) {
       Groups groupToChange = list.get(index);
       AddEditGroupDialogController.showAsDialog(app, groupToChange);
+      System.out.println(new GroupUpdate().getDeleteByIdRequest(groupToChange));
+      DBHelper.deleteOrUpdateByRequest(groupToChange, new GroupUpdate());
     }
   }
 

@@ -17,7 +17,7 @@ public class PeoplePresenter extends BaseTabViewPresenter<People> {
   @Override
   public void onDelete(int index) {
     People peopleToDelete = list.get(index);
-    if (DBHelper.deleteByRequest(peopleToDelete.getId(), new PeopleDelete()) > 0) {
+    if (DBHelper.deleteOrUpdateByRequest(peopleToDelete, new PeopleDelete()) > 0) {
       list.remove(index);
     }
   }

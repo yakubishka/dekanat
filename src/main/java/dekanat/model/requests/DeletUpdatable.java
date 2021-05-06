@@ -1,7 +1,7 @@
 package dekanat.model.requests;
 
-public interface DeletUpdatable {
+public interface DeletUpdatable<T> {
 
-  String getDeleteByIdRequest(long id);
+  String getDeleteByIdRequest(T item);
 
 }
