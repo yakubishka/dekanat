@@ -38,16 +38,6 @@ public class PeopleController extends BaseTabViewController<People> {
   }
 
   @Override
-  public void onInsertClick() {
-
-  }
-
-  @Override
-  public void onEditClick() {
-
-  }
-
-  @Override
   public BaseTabViewPresenter<People> createPresenter() {
     return new PeoplePresenter();
   }

@@ -26,16 +26,18 @@ dekanat/model/holder/MarksTabHolder.java
  dekanat.model.holder.MarksTabHolder
 dekanat/model/requests/insert/SubjectInsert.java
  dekanat.model.requests.insert.SubjectInsert
+dekanat/model/requests/insert/PeopleInsert.java
+ dekanat.model.requests.insert.PeopleInsert
 dekanat/model/requests/select/MarksSelect.java
  dekanat.model.requests.select.MarksSelect
 dekanat/controllers/tab/marks/MarksController.java
  dekanat.controllers.tab.marks.MarksController
-dekanat/controllers/tab/people/PeopleController.java
- dekanat.controllers.tab.people.PeopleController
+dekanat/model/requests/update/PeopleUpdate.java
+ dekanat.model.requests.update.PeopleUpdate
 dekanat/resources/LayoutRes.java
  dekanat.resources.LayoutRes
-dekanat/controllers/dialogs/AddEditMarksDialogController.java
- dekanat.controllers.dialogs.AddEditMarksDialogController
+dekanat/controllers/tab/people/PeoplePresenter.java
+ dekanat.controllers.tab.people.PeoplePresenter
 dekanat/model/db/People.java
  dekanat.model.db.People
 dekanat/model/requests/select/PeopleSelect.java
@@ -46,8 +48,8 @@ dekanat/model/requests/delete/MarksDelete.java
  dekanat.model.requests.delete.MarksDelete
 dekanat/controllers/tab/groups/GroupsPresenter.java
  dekanat.controllers.tab.groups.GroupsPresenter
-dekanat/controllers/tab/people/PeoplePresenter.java
- dekanat.controllers.tab.people.PeoplePresenter
+dekanat/controllers/tab/subjects/SubjectsController.java
+ dekanat.controllers.tab.subjects.SubjectsController
 dekanat/model/db/Groups.java
  dekanat.model.db.Groups
 dekanat/controllers/dialogs/AddEditSubjectDialogController.java
@@ -69,6 +71,8 @@ dekanat/model/requests/select/SubjectSelect.java
  dekanat.model.requests.select.SubjectSelect
 dekanat/controllers/tab/marks/MarksPresenter.java
  dekanat.controllers.tab.marks.MarksPresenter
+dekanat/model/requests/select/GroupsSelect.java
+ dekanat.model.requests.select.GroupsSelect
 dekanat/model/BaseTabHolder.java
  dekanat.model.BaseTabHolder
  dekanat.model.BaseTabHolder$TabType
@@ -88,7 +92,7 @@ dekanat/resources/WindowConstants.java
  dekanat.resources.WindowConstants
 dekanat/architecture/BaseTabViewPresenter.java
  dekanat.architecture.BaseTabViewPresenter
-dekanat/controllers/tab/subjects/SubjectsController.java
- dekanat.controllers.tab.subjects.SubjectsController
-dekanat/model/requests/select/GroupsSelect.java
- dekanat.model.requests.select.GroupsSelect
+dekanat/controllers/tab/people/PeopleController.java
+ dekanat.controllers.tab.people.PeopleController
+dekanat/controllers/dialogs/AddEditMarksDialogController.java
+ dekanat.controllers.dialogs.AddEditMarksDialogController

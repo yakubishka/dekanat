@@ -108,4 +108,14 @@ public class People {
   public void setGroupName(String groupName) {
     this.groupName.set(groupName);
   }
+
+  public boolean isEmpty() {
+    return id.getValue() == -1 && firstName.getValue().isEmpty()
+            && firstName.getValue().isEmpty()
+            && lastName.getValue().isEmpty()
+            && fatherName.getValue().isEmpty()
+            && groupName.getValue().isEmpty()
+            && type.getValue().isEmpty();
+  }
+
 }

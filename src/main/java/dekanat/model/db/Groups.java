@@ -39,6 +39,11 @@ public class Groups {
     this.name.set(name);
   }
 
+  @Override
+  public String toString() {
+    return name.getValue();
+  }
+
   public boolean isEmpty() {
     return id.getValue() == -1 && name.getValue().isEmpty();
   }

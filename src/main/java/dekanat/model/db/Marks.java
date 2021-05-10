@@ -127,4 +127,13 @@ public class Marks {
   public void setSubjectName(String subjectName) {
     this.subjectName.set(subjectName);
   }
+
+  public boolean isEmpty() {
+    return id.getValue() == -1
+        && studentId.getValue() == -1
+        && subjectId.getValue() == -1
+        && teacherId.getValue() == -1
+        && value.getValue() == -1;
+  }
+
 }
