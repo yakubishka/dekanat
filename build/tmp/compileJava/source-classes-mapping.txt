@@ -1,100 +1,109 @@
-dekanat/architecture/BaseTabViewController.java
- dekanat.architecture.BaseTabViewController
-dekanat/architecture/BaseViewController.java
- dekanat.architecture.BaseViewController
+dekanat/model/requests/update/SubjectUpdate.java
+ dekanat.model.requests.update.SubjectUpdate
+dekanat/resources/LayoutRes.java
+ dekanat.resources.LayoutRes
 dekanat/model/requests/DeletUpdatable.java
  dekanat.model.requests.DeletUpdatable
 dekanat/resources/StringRes.java
  dekanat.resources.StringRes
 dekanat/utils/AlertHelper.java
  dekanat.utils.AlertHelper
-dekanat/model/requests/insert/MarksInsert.java
- dekanat.model.requests.insert.MarksInsert
-dekanat/model/requests/delete/GroupsDelete.java
- dekanat.model.requests.delete.GroupsDelete
-dekanat/model/db/Marks.java
- dekanat.model.db.Marks
-dekanat/resources/WindowConstants.java
- dekanat.resources.WindowConstants
-dekanat/utils/DBHelper.java
- dekanat.utils.DBHelper
-dekanat/model/requests/SelectInsertable.java
- dekanat.model.requests.SelectInsertable
-dekanat/controllers/dialogs/AddEditGroupDialogController.java
- dekanat.controllers.dialogs.AddEditGroupDialogController
-dekanat/model/holder/MarksTabHolder.java
- dekanat.model.holder.MarksTabHolder
-dekanat/model/holder/GroupTabHolder.java
- dekanat.model.holder.GroupTabHolder
-dekanat/controllers/TableViewController.java
- dekanat.controllers.TableViewController
-dekanat/model/requests/select/MarksSelect.java
- dekanat.model.requests.select.MarksSelect
 dekanat/model/requests/update/GroupUpdate.java
  dekanat.model.requests.update.GroupUpdate
-dekanat/model/requests/insert/GroupInsert.java
- dekanat.model.requests.insert.GroupInsert
-dekanat/resources/LayoutRes.java
- dekanat.resources.LayoutRes
-dekanat/model/holder/SubjectsTabHolder.java
- dekanat.model.holder.SubjectsTabHolder
-dekanat/model/requests/select/GroupsSelect.java
- dekanat.model.requests.select.GroupsSelect
-dekanat/architecture/BaseTabViewPresenter.java
- dekanat.architecture.BaseTabViewPresenter
-dekanat/app/MainApp.java
- dekanat.app.MainApp
-dekanat/model/requests/delete/MarksDelete.java
- dekanat.model.requests.delete.MarksDelete
-dekanat/controllers/tab/groups/GroupsPresenter.java
- dekanat.controllers.tab.groups.GroupsPresenter
-dekanat/controllers/tab/groups/GroupsController.java
- dekanat.controllers.tab.groups.GroupsController
-dekanat/model/db/Groups.java
- dekanat.model.db.Groups
-dekanat/controllers/tab/marks/MarksPresenter.java
- dekanat.controllers.tab.marks.MarksPresenter
-dekanat/app/DialogStageHelper.java
- dekanat.app.DialogStageHelper
- dekanat.app.DialogStageHelper$Builder
-dekanat/model/BaseTabHolder.java
- dekanat.model.BaseTabHolder
- dekanat.model.BaseTabHolder$TabType
-dekanat/controllers/tab/marks/MarksController.java
- dekanat.controllers.tab.marks.MarksController
-dekanat/model/holder/PeopleTabHolder.java
- dekanat.model.holder.PeopleTabHolder
-dekanat/controllers/dialogs/AddEditSubjectDialogController.java
- dekanat.controllers.dialogs.AddEditSubjectDialogController
-dekanat/model/requests/delete/SubjectsDelete.java
- dekanat.model.requests.delete.SubjectsDelete
-dekanat/controllers/dialogs/AddEditPeopleDialogController.java
- dekanat.controllers.dialogs.AddEditPeopleDialogController
-dekanat/model/requests/update/SubjectUpdate.java
- dekanat.model.requests.update.SubjectUpdate
+dekanat/model/requests/insert/MarksInsert.java
+ dekanat.model.requests.insert.MarksInsert
+dekanat/model/db/Marks.java
+ dekanat.model.db.Marks
 dekanat/model/db/Subjects.java
  dekanat.model.db.Subjects
-dekanat/model/requests/select/SubjectSelect.java
- dekanat.model.requests.select.SubjectSelect
+dekanat/model/requests/SelectInsertable.java
+ dekanat.model.requests.SelectInsertable
 dekanat/model/requests/update/PeopleUpdate.java
  dekanat.model.requests.update.PeopleUpdate
-dekanat/model/requests/delete/PeopleDelete.java
- dekanat.model.requests.delete.PeopleDelete
+dekanat/model/User.java
+ dekanat.model.User
 dekanat/model/requests/insert/SubjectInsert.java
  dekanat.model.requests.insert.SubjectInsert
 dekanat/model/requests/insert/PeopleInsert.java
  dekanat.model.requests.insert.PeopleInsert
-dekanat/controllers/tab/people/PeopleController.java
- dekanat.controllers.tab.people.PeopleController
-dekanat/controllers/dialogs/AddEditMarksDialogController.java
- dekanat.controllers.dialogs.AddEditMarksDialogController
+dekanat/model/requests/select/UsersSelect.java
+ dekanat.model.requests.select.UsersSelect
 dekanat/model/db/People.java
  dekanat.model.db.People
 dekanat/model/requests/select/PeopleSelect.java
  dekanat.model.requests.select.PeopleSelect
-dekanat/controllers/tab/subjects/SubjectsPresenter.java
- dekanat.controllers.tab.subjects.SubjectsPresenter
+dekanat/model/requests/delete/GroupsDelete.java
+ dekanat.model.requests.delete.GroupsDelete
+dekanat/model/requests/delete/MarksDelete.java
+ dekanat.model.requests.delete.MarksDelete
+dekanat/model/requests/select/SubjectSelect.java
+ dekanat.model.requests.select.SubjectSelect
+dekanat/model/requests/select/MarksSelect.java
+ dekanat.model.requests.select.MarksSelect
 dekanat/controllers/tab/subjects/SubjectsController.java
  dekanat.controllers.tab.subjects.SubjectsController
+dekanat/model/db/Groups.java
+ dekanat.model.db.Groups
+dekanat/model/requests/insert/GroupInsert.java
+ dekanat.model.requests.insert.GroupInsert
+dekanat/model/requests/delete/SubjectsDelete.java
+ dekanat.model.requests.delete.SubjectsDelete
+dekanat/model/requests/select/GroupsSelect.java
+ dekanat.model.requests.select.GroupsSelect
+dekanat/model/requests/delete/PeopleDelete.java
+ dekanat.model.requests.delete.PeopleDelete
+dekanat/resources/WindowConstants.java
+ dekanat.resources.WindowConstants
+dekanat/utils/DBHelper.java
+ dekanat.utils.DBHelper
+dekanat/architecture/BaseTabViewController.java
+ dekanat.architecture.BaseTabViewController
+dekanat/architecture/BaseViewController.java
+ dekanat.architecture.BaseViewController
+dekanat/controllers/dialogs/AddEditSubjectDialogController.java
+ dekanat.controllers.dialogs.AddEditSubjectDialogController
+dekanat/app/DialogStageHelper.java
+ dekanat.app.DialogStageHelper
+ dekanat.app.DialogStageHelper$Builder
+dekanat/controllers/dialogs/AddEditPeopleDialogController.java
+ dekanat.controllers.dialogs.AddEditPeopleDialogController
+dekanat/model/holder/PeopleTabHolder.java
+ dekanat.model.holder.PeopleTabHolder
+dekanat/model/holder/SubjectsTabHolder.java
+ dekanat.model.holder.SubjectsTabHolder
+dekanat/controllers/tab/groups/GroupsController.java
+ dekanat.controllers.tab.groups.GroupsController
+dekanat/controllers/dialogs/AddEditGroupDialogController.java
+ dekanat.controllers.dialogs.AddEditGroupDialogController
+dekanat/controllers/tab/marks/MarksPresenter.java
+ dekanat.controllers.tab.marks.MarksPresenter
+dekanat/model/holder/MarksTabHolder.java
+ dekanat.model.holder.MarksTabHolder
+dekanat/model/BaseTabHolder.java
+ dekanat.model.BaseTabHolder
+ dekanat.model.BaseTabHolder$TabType
 dekanat/controllers/tab/people/PeoplePresenter.java
  dekanat.controllers.tab.people.PeoplePresenter
+dekanat/model/holder/GroupTabHolder.java
+ dekanat.model.holder.GroupTabHolder
+dekanat/controllers/tab/marks/MarksController.java
+ dekanat.controllers.tab.marks.MarksController
+dekanat/controllers/tab/people/PeopleController.java
+ dekanat.controllers.tab.people.PeopleController
+dekanat/controllers/dialogs/AddEditMarksDialogController.java
+ dekanat.controllers.dialogs.AddEditMarksDialogController
+dekanat/app/MainApp.java
+ dekanat.app.MainApp
+dekanat/architecture/BaseTabViewPresenter.java
+ dekanat.architecture.BaseTabViewPresenter
+dekanat/controllers/tab/groups/GroupsPresenter.java
+ dekanat.controllers.tab.groups.GroupsPresenter
+dekanat/controllers/tab/subjects/SubjectsPresenter.java
+ dekanat.controllers.tab.subjects.SubjectsPresenter
+dekanat/controllers/LoginDialogController.java
+ dekanat.controllers.LoginDialogController
+dekanat/utils/UserUtils.java
+ dekanat.utils.UserUtils
+ dekanat.utils.UserUtils$OnUserChangeListener
+dekanat/controllers/TableViewController.java
+ dekanat.controllers.TableViewController

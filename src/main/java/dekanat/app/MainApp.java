@@ -1,6 +1,8 @@
 package dekanat.app;
 
 import dekanat.architecture.BaseViewController;
+import dekanat.controllers.LoginDialogController;
+import dekanat.model.User;
 import dekanat.resources.LayoutRes;
 import dekanat.resources.StringRes;
 import dekanat.resources.WindowConstants;
@@ -27,6 +29,7 @@ public class MainApp extends Application  {
     this.primaryStage.setTitle(StringRes.APP_NAME);
     this.createRootView();
     showTableView();
+    LoginDialogController.showAsDialog(this);
   }
 
   private void createRootView() {
@@ -59,6 +62,10 @@ public class MainApp extends Application  {
       e.printStackTrace();
       return null;
     }
+  }
+
+  public void close() {
+    primaryStage.close();
   }
 
   public Stage getPrimaryStage() {

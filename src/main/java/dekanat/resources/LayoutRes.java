@@ -15,5 +15,7 @@ public class LayoutRes {
   public static final String ADD_EDIT_PEOPLE = "add_edit_people_layout.fxml";
   public static final String ADD_EDIT_SUBJECTS = "add_edit_subject_layout.fxml";
 
+  public static final String LOGIN_LAYOUT = "login_layout.fxml";
+
 
 }

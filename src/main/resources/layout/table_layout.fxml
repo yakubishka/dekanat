@@ -10,10 +10,11 @@
       <TabPane fx:id="tabPane" layoutX="-3.0" layoutY="53.0" prefHeight="297.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <ButtonBar layoutX="323.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0">
         <buttons>
-          <Button mnemonicParsing="false" onAction="#onInsertClick" text="Insert" />
-            <Button mnemonicParsing="false" onAction="#onEditClick" text="Edit" />
-            <Button mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
+          <Button fx:id="insertButton" disable="true" mnemonicParsing="false" onAction="#onInsertClick" text="Insert" />
+            <Button fx:id="editButton" disable="true" mnemonicParsing="false" onAction="#onEditClick" text="Edit" />
+            <Button fx:id="deleteButton" disable="true" mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
         </buttons>
       </ButtonBar>
+      <Button layoutX="14.0" layoutY="368.0" mnemonicParsing="false" onAction="#onLogoutClick" text="Logout" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
    </children>
 </AnchorPane>

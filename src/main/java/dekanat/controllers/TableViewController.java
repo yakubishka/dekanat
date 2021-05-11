@@ -7,7 +7,9 @@ import dekanat.model.holder.GroupTabHolder;
 import dekanat.model.holder.MarksTabHolder;
 import dekanat.model.holder.PeopleTabHolder;
 import dekanat.model.holder.SubjectsTabHolder;
+import dekanat.utils.UserUtils;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 
@@ -17,6 +19,15 @@ public class TableViewController extends BaseViewController {
 
   @FXML
   private TabPane tabPane;
+
+  @FXML
+  private Button editButton;
+
+  @FXML
+  private Button insertButton;
+
+  @FXML
+  private Button deleteButton;
 
   @FXML
   private void initialize() { }
@@ -38,6 +49,22 @@ public class TableViewController extends BaseViewController {
     tabPane.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
       holders.get((int)newValue).getController().reloadList();
     });
+
+    UserUtils.onUserChangeListenerList.add((user) -> {
+      if (user != null) {
+        if (user.getStatus() != null) {
+
+          boolean isDisabled = !(user.getStatus() == 2);
+
+          editButton.setDisable(isDisabled);
+          insertButton.setDisable(isDisabled);
+          deleteButton.setDisable(isDisabled);
+        }
+      } else {
+        LoginDialogController.showAsDialog(app);
+      }
+    });
+
   }
 
   @FXML
@@ -53,6 +80,11 @@ public class TableViewController extends BaseViewController {
   @FXML
   private void onEditClick() {
     holders.get(getCurrentTabIndex()).getController().onEditClick();
+  }
+
+  @FXML
+  private void onLogoutClick() {
+    UserUtils.clearUser();
   }
 
   private int getCurrentTabIndex() {
