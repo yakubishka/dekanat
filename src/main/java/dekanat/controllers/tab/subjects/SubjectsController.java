@@ -3,6 +3,7 @@ package dekanat.controllers.tab.subjects;
 import dekanat.architecture.BaseTabViewController;
 import dekanat.architecture.BaseTabViewPresenter;
 import dekanat.model.db.Subjects;
+import dekanat.utils.WriteFileHelper;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 
@@ -25,6 +26,11 @@ public class SubjectsController extends BaseTabViewController<Subjects> {
   @Override
   public BaseTabViewPresenter<Subjects> createPresenter() {
     return new SubjectsPresenter();
+  }
+
+  @Override
+  public void exportToFile() {
+    WriteFileHelper.writeToFile("subjects.csv", presenter.getList());
   }
 
 }

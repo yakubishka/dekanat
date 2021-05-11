@@ -3,6 +3,7 @@ package dekanat.controllers.tab.marks;
 import dekanat.architecture.BaseTabViewController;
 import dekanat.architecture.BaseTabViewPresenter;
 import dekanat.model.db.Marks;
+import dekanat.utils.WriteFileHelper;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 
@@ -36,5 +37,10 @@ public class MarksController extends BaseTabViewController<Marks> {
   @Override
   public BaseTabViewPresenter<Marks> createPresenter() {
     return new MarksPresenter();
+  }
+
+  @Override
+  public void exportToFile() {
+    WriteFileHelper.writeToFile("marks.csv", presenter.getList());
   }
 }

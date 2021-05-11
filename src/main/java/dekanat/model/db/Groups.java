@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Groups {
+public class Groups implements CSVWriteable {
 
   private LongProperty id;
   private StringProperty name;
@@ -48,4 +48,13 @@ public class Groups {
     return id.getValue() == -1 && name.getValue().isEmpty();
   }
 
+  @Override
+  public String getRow() {
+    return String.join(",", getId() + "", getName() + "\n");
+  }
+
+  @Override
+  public String getHeader() {
+    return "id, name\n";
+  }
 }

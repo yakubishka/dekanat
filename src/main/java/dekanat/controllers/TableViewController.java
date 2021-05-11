@@ -2,6 +2,7 @@ package dekanat.controllers;
 
 import dekanat.app.MainApp;
 import dekanat.architecture.BaseViewController;
+import dekanat.controllers.tab.subjects.SubjectsController;
 import dekanat.model.BaseTabHolder;
 import dekanat.model.holder.GroupTabHolder;
 import dekanat.model.holder.MarksTabHolder;
@@ -80,6 +81,11 @@ public class TableViewController extends BaseViewController {
   @FXML
   private void onEditClick() {
     holders.get(getCurrentTabIndex()).getController().onEditClick();
+  }
+
+  @FXML
+  private void onExportClick() {
+    holders.get(getCurrentTabIndex()).getController().exportToFile();
   }
 
   @FXML

@@ -39,6 +39,8 @@ public abstract class BaseTabViewController<T> {
 
   public abstract BaseTabViewPresenter<T> createPresenter();
 
+  public abstract void exportToFile();
+
   public void reloadList() {
     presenter.reloadList();
   }

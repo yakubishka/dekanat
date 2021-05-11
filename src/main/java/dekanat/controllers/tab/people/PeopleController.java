@@ -3,6 +3,7 @@ package dekanat.controllers.tab.people;
 import dekanat.architecture.BaseTabViewController;
 import dekanat.architecture.BaseTabViewPresenter;
 import dekanat.model.db.People;
+import dekanat.utils.WriteFileHelper;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 
@@ -40,6 +41,11 @@ public class PeopleController extends BaseTabViewController<People> {
   @Override
   public BaseTabViewPresenter<People> createPresenter() {
     return new PeoplePresenter();
+  }
+
+  @Override
+  public void exportToFile() {
+    WriteFileHelper.writeToFile("people.csv", presenter.getList());
   }
 
 }

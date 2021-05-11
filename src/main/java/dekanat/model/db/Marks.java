@@ -2,7 +2,7 @@ package dekanat.model.db;
 
 import javafx.beans.property.*;
 
-public class Marks {
+public class Marks implements CSVWriteable {
 
   private LongProperty id;
   private LongProperty studentId;
@@ -20,8 +20,7 @@ public class Marks {
                String teacherName,
                long subjectId,
                String subjectName,
-               int value
-  ) {
+               int value) {
     this.id = new SimpleLongProperty(id);
     this.studentId = new SimpleLongProperty(studentId);
     this.studentName = new SimpleStringProperty(studentName);
@@ -136,4 +135,17 @@ public class Marks {
         && value.getValue() == -1;
   }
 
+  @Override
+  public String getRow() {
+    return String.join(",", getId() + "",
+        getStudentName(),
+        getSubjectName(),
+        getTeacherName(),
+        getValue() + "\n");
+  }
+
+  @Override
+  public String getHeader() {
+    return "id, student, subject, teacher, value\n";
+  }
 }

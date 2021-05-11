@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class People {
+public class People implements CSVWriteable {
 
   private LongProperty id;
   private StringProperty firstName;
@@ -124,4 +124,18 @@ public class People {
     return getLastName();
   }
 
+  @Override
+  public String getRow() {
+    return String.join(",", getId() + "",
+        getFirstName(),
+        getLastName(),
+        getFatherName(),
+        getGroupName(),
+        getType() + "\n");
+  }
+
+  @Override
+  public String getHeader() {
+    return "id, first name, last name, father name, group, type\n";
+  }
 }

@@ -13,6 +13,7 @@
           <Button fx:id="insertButton" disable="true" mnemonicParsing="false" onAction="#onInsertClick" text="Insert" />
             <Button fx:id="editButton" disable="true" mnemonicParsing="false" onAction="#onEditClick" text="Edit" />
             <Button fx:id="deleteButton" disable="true" mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#onExportClick" text="Export" />
         </buttons>
       </ButtonBar>
       <Button layoutX="14.0" layoutY="368.0" mnemonicParsing="false" onAction="#onLogoutClick" text="Logout" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
