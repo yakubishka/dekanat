@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 
 public class AddEditMarksDialogController {
 
-
   @FXML
   private ComboBox<People> studentField;
 
@@ -41,7 +40,7 @@ public class AddEditMarksDialogController {
   private Stage dialogStage;
   private final ObservableList<People> teacherList = FXCollections.observableArrayList();
   private final ObservableList<People> studentList = FXCollections.observableArrayList();
-  private final ObservableList<Subjects> subjectsList = FXCollections.emptyObservableList();
+  private final ObservableList<Subjects> subjectsList = FXCollections.observableArrayList();
 
   @FXML
   private void initialize() {
@@ -49,12 +48,14 @@ public class AddEditMarksDialogController {
     List<People> peopleList = DBHelper.getAllByRequest(new PeopleSelect());
     teacherList.addAll(peopleList.stream().filter((people -> people.getType().equals("P"))).collect(Collectors.toList()));
     studentList.addAll(peopleList.stream().filter((people -> people.getType().equals("S"))).collect(Collectors.toList()));
+    studentField.setItems(studentList);
+    teacherField.setItems(teacherList);
+    subjectField.setItems(subjectsList);
   }
 
   public static void showAsDialog(MainApp app, @NotNull Marks mark) {
     FXMLLoader loader = app.createLoader(LayoutRes.ADD_EDIT_MARKS);
     AnchorPane dialogLayout = app.getPaneFromLoader(loader);
-
     AddEditMarksDialogController controller = loader.getController();
     controller.setMark(mark);
 

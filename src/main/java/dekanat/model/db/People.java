@@ -1,5 +1,6 @@
 package dekanat.model.db;
 
+import com.sun.istack.Interned;
 import javafx.beans.property.LongProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -116,6 +117,11 @@ public class People {
             && fatherName.getValue().isEmpty()
             && groupName.getValue().isEmpty()
             && type.getValue().isEmpty();
+  }
+
+  @Override
+  public String toString() {
+    return getLastName();
   }
 
 }

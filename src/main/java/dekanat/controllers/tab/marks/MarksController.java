@@ -34,15 +34,6 @@ public class MarksController extends BaseTabViewController<Marks> {
   }
 
   @Override
-  public void onInsertClick() {
-  }
-
-  @Override
-  public void onEditClick() {
-
-  }
-
-  @Override
   public BaseTabViewPresenter<Marks> createPresenter() {
     return new MarksPresenter();
   }

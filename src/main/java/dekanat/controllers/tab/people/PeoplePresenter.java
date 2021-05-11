@@ -2,16 +2,12 @@ package dekanat.controllers.tab.people;
 
 import dekanat.architecture.BaseTabViewPresenter;
 import dekanat.controllers.dialogs.AddEditPeopleDialogController;
-import dekanat.controllers.dialogs.AddEditSubjectDialogController;
 import dekanat.model.db.People;
-import dekanat.model.db.Subjects;
 import dekanat.model.requests.delete.PeopleDelete;
 import dekanat.model.requests.insert.PeopleInsert;
-import dekanat.model.requests.insert.SubjectInsert;
 import dekanat.model.requests.select.PeopleSelect;
 import dekanat.model.requests.SelectInsertable;
 import dekanat.model.requests.update.PeopleUpdate;
-import dekanat.model.requests.update.SubjectUpdate;
 import dekanat.utils.DBHelper;
 
 import java.util.List;

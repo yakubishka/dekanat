@@ -1,6 +1,7 @@
 package dekanat.controllers.tab.marks;
 
 import dekanat.architecture.BaseTabViewPresenter;
+import dekanat.controllers.dialogs.AddEditMarksDialogController;
 import dekanat.model.db.Marks;
 import dekanat.model.requests.delete.MarksDelete;
 import dekanat.model.requests.select.MarksSelect;
@@ -24,12 +25,15 @@ public class MarksPresenter extends BaseTabViewPresenter<Marks> {
 
   @Override
   public void onEdit(int index) {
-
+    if (app != null) {
+      Marks marksToChange = list.get(index);
+      AddEditMarksDialogController.showAsDialog(app, marksToChange);
+//      DBHelper.deleteOrUpdateByRequest(marksToChange, new GroupUpdate());
+    }
   }
 
   @Override
   public void onInsert() {
-
   }
 
 }

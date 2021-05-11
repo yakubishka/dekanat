@@ -42,4 +42,10 @@ public class Subjects {
   public boolean isEmpty() {
     return id.getValue() == -1 && name.getValue().isEmpty();
   }
+
+  @Override
+  public String toString() {
+    return getName();
+  }
+
 }
